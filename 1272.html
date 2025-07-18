@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>House on the Hill - Ramsgate | TokenEstate</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur z-50 shadow">
+    <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+      <div class="text-xl font-bold text-indigo-600">TokenEstate</div>
+    <nav class="hidden md:flex space-x-2 bg-gray-100 rounded-lg px-2 py-1 shadow-inner">
+  <button onclick="openModal('aboutModal')" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 transition">About</button>
+  <button onclick="openModal('howModal')" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 transition">How It Works</button>
+  <button onclick="openModal('propertiesModal')" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 transition">Properties</button>
+  <button onclick="openModal('faqModal')" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 transition">FAQ</button>
+</nav>
+
+
+      <a href="#cta" class="hidden md:inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">Invest Now</a>
+    </div>
+  </header>
+
+  <main class="pt-20">
+
+    <!-- HERO SECTION -->
+    <section class="w-full h-[70vh] bg-cover bg-center relative" style="background-image: url('home.jpg');">
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="relative h-full flex items-center justify-center text-center text-white">
+        <div class="max-w-2xl px-4">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">A Seaside Sanctuary with Exceptional Investment Potential</h1>
+          <p class="text-lg">Own fractional shares of this luxury coastal home in Ramsgate, starting from just R500.</p>
+          <a href="#cta" class="mt-6 inline-block bg-indigo-600 text-white px-6 py-3 rounded hover:bg-indigo-700 transition">Enquire Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INVESTMENT HIGHLIGHTS -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-12">Investment Highlights</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded shadow hover:shadow-lg transition transform hover:-translate-y-1">
+            <h3 class="text-xl font-semibold text-indigo-600 mb-2">Prime Coastal Location</h3>
+            <p class="text-gray-600">Minutes from Ramsgate’s Blue Flag beaches, with vibrant marine life and a peaceful lifestyle.</p>
+          </div>
+          <div class="bg-white p-6 rounded shadow hover:shadow-lg transition transform hover:-translate-y-1">
+            <h3 class="text-xl font-semibold text-indigo-600 mb-2">Airbnb Superhost Income</h3>
+            <p class="text-gray-600">Proven rental income from three self-contained cottages, ensuring immediate cash flow potential.</p>
+          </div>
+          <div class="bg-white p-6 rounded shadow hover:shadow-lg transition transform hover:-translate-y-1">
+            <h3 class="text-xl font-semibold text-indigo-600 mb-2">Sustainable Living</h3>
+            <p class="text-gray-600">Solar systems, water tanks, and efficient infrastructure reduce operational costs and increase resilience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROPERTY DETAILS -->
+    <section class="py-16">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Property Overview</h2>
+          <p class="text-gray-600 mb-6">
+            House on the Hill is a beautifully renovated property on a 2,022m² plot with sweeping lagoon and ocean views in Ramsgate. The main house offers 4 bedrooms, spacious living areas, and modern finishes. The property also features three self-contained cottages, ideal for Airbnb income or guests.
+          </p>
+
+          <ul class="space-y-3 text-gray-700">
+            <li><span class="font-semibold">Bedrooms:</span> 7</li>
+            <li><span class="font-semibold">Bathrooms:</span> 5</li>
+            <li><span class="font-semibold">Garages:</span> 4</li>
+            <li><span class="font-semibold">Property Size:</span> ± 2,022 m²</li>
+            <li><span class="font-semibold">Rates:</span> R 3,000 / month</li>
+          </ul>
+
+          <div class="mt-8">
+            <h3 class="text-2xl font-bold text-indigo-600 mb-2">Investment Opportunity</h3>
+            <p class="text-gray-700">
+              Currently operating as a successful Airbnb with loyal guests and high ratings. The property offers a seamless handover, ideal for investors or lifestyle buyers.
+            </p>
+            <p class="mt-2 text-sm text-gray-500">Note: Furniture not included. Inventory available separately.</p>
+          </div>
+
+          <a href="#calculator" class="inline-block mt-8 bg-indigo-600 text-white px-6 py-3 rounded hover:bg-indigo-700 transition">Calculate Your Investment</a>
+        </div>
+
+        <div class="space-y-4">
+          <img src="1.jpg" alt="House on the Hill" class="rounded shadow">
+          <img src="2.jpg" alt="Lagoon View" class="rounded shadow">
+          <img src="3.jpg" alt="Interior" class="rounded shadow">
+        </div>
+      </div>
+    </section>
+
+    <!-- INVESTMENT CALCULATOR -->
+    <section id="calculator" class="py-16 bg-gray-100">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Investment Calculator</h2>
+        <p class="mb-8 text-gray-600">Enter your desired investment amount to see how many tokens you’ll own and your potential annual return.</p>
+        <div class="max-w-md mx-auto space-y-4">
+          <input id="investmentInput" type="number" placeholder="Enter amount in Rands" class="w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring focus:border-indigo-500">
+          <button onclick="calculateTokens()" class="w-full bg-indigo-600 text-white py-3 rounded hover:bg-indigo-700 transition">Calculate</button>
+          <div id="calcResult" class="text-gray-700 text-lg mt-4"></div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function calculateTokens() {
+        const amount = parseFloat(document.getElementById('investmentInput').value);
+        const tokenPrice = 50; // R50 per token
+        const yieldRate = 0.052; // 5.2%
+
+        if (!isNaN(amount) && amount > 0) {
+          const tokens = Math.floor(amount / tokenPrice);
+          const annualReturn = amount * yieldRate;
+          document.getElementById('calcResult').innerHTML =
+            `You’d own <span class="font-semibold text-indigo-600">${tokens}</span> tokens. 
+            Estimated annual return: <span class="font-semibold text-indigo-600">R${annualReturn.toFixed(2)}</span>.`;
+        } else {
+          document.getElementById('calcResult').textContent = 'Please enter a valid amount.';
+        }
+      }
+    </script>
+
+    <!-- FAQ SECTION -->
+    <section class="py-16">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">Frequently Asked Questions</h2>
+        <div class="space-y-8">
+          <div>
+            <h3 class="text-lg font-semibold text-indigo-600 mb-2">Is Airbnb legal in Ramsgate?</h3>
+            <p class="text-gray-600">Yes. Short-term rentals are allowed and the property currently operates as an Airbnb with Superhost status.</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-indigo-600 mb-2">How secure is my investment?</h3>
+            <p class="text-gray-600">Tokens are backed by a real property asset. All transactions are recorded on the blockchain for transparency and security.</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-indigo-600 mb-2">What are the fees involved?</h3>
+            <p class="text-gray-600">There’s a 1.5% annual management fee and a 2% transaction fee if you sell tokens.</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-indigo-600 mb-2">Can foreigners invest?</h3>
+            <p class="text-gray-600">Yes, foreign investors are welcome to participate, subject to South African property ownership regulations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="py-16 bg-indigo-600 text-white text-center">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-4">Ready to Own a Piece of the South Coast?</h2>
+        <p class="mb-6">Invest in House on the Hill and secure your stake in South Africa’s thriving property market. Contact us today to get started.</p>
+        <a href="mailto:support@tokenestate.com" class="bg-white text-indigo-600 px-6 py-3 rounded text-lg font-semibold hover:bg-gray-100 transition">Contact Us</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PROFESSIONAL FOOTER -->
+  <footer class="bg-gray-900 text-gray-300 text-sm pt-12">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="text-white font-bold mb-4">TokenEstate</h3>
+        <p class="text-gray-400">TokenEstate enables fractional ownership of premium real estate across South Africa. Registered and compliant under local regulations. Bringing blockchain technology to the property market.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4">Company</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-white">About Us</a></li>
+          <li><a href="#" class="hover:text-white">Careers</a></li>
+          <li><a href="#" class="hover:text-white">Press</a></li>
+          <li><a href="#" class="hover:text-white">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4">Legal</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+          <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-white">Risk Disclosure</a></li>
+          <li><a href="#" class="hover:text-white">Regulatory Information</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-4">Contact</h4>
+        <ul class="space-y-2">
+          <li>Email: support@tokenestate.com</li>
+          <li>Phone: +27 (0) 21 555 1234</li>
+          <li><a href="#" class="hover:text-white">Contact Form</a></li>
+          <li class="flex space-x-3 mt-2">
+            <a href="#" class="hover:text-white">LinkedIn</a>
+            <a href="#" class="hover:text-white">Twitter</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-8 border-t border-gray-700 text-center py-4 text-gray-500">
+      &copy; 2025 TokenEstate. All rights reserved. Investing in property tokens carries risk. This is not financial advice.
+    </div>
+  </footer>
+<!-- MODALS -->
+<div id="modalOverlay" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+  <div id="modalContent" class="bg-white w-full max-w-2xl rounded-lg shadow-lg p-8 relative mx-4 max-h-[90vh] overflow-y-auto">
+    <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-red-500 text-2xl font-bold">&times;</button>
+    <div id="modalInner"></div>
+  </div>
+</div>
+<script>
+  function openModal(id) {
+    const content = {
+      aboutModal: `
+        <h2 class="text-2xl font-bold text-indigo-600 mb-4">About TokenEstate</h2>
+        <p class="text-gray-700 mb-4">
+          TokenEstate is a pioneering platform enabling South Africans to invest in premium real estate from as little as R500. Our mission is to democratize property investment through secure tokenization and blockchain technology.
+        </p>
+        <ul class="list-disc pl-5 text-gray-700 space-y-2">
+          <li>Registered South African company</li>
+          <li>Transparent operations with audited financials</li>
+          <li>Innovative technology for secure asset management</li>
+          <li>Focus on sustainable and high-yield properties</li>
+        </ul>
+      `,
+      howModal: `
+        <h2 class="text-2xl font-bold text-indigo-600 mb-4">How It Works</h2>
+        <p class="text-gray-700 mb-4">
+          Investing with TokenEstate is simple:
+        </p>
+        <ol class="list-decimal pl-5 text-gray-700 space-y-2">
+          <li>Browse our available properties.</li>
+          <li>Choose how much to invest (minimum R500).</li>
+          <li>Complete your purchase via EFT, credit card, or crypto.</li>
+          <li>Receive digital tokens representing your share in the property.</li>
+          <li>Earn rental income and capital appreciation proportional to your tokens.</li>
+        </ol>
+      `,
+      propertiesModal: `
+        <h2 class="text-2xl font-bold text-indigo-600 mb-4">Our Properties</h2>
+        <p class="text-gray-700 mb-4">
+          We specialize in high-potential, income-generating real estate across South Africa, including:
+        </p>
+        <ul class="list-disc pl-5 text-gray-700 space-y-2">
+          <li>Luxury coastal villas (e.g. House on the Hill, Ramsgate)</li>
+          <li>Urban apartments in major cities</li>
+          <li>Mixed-use commercial buildings</li>
+          <li>Eco-friendly developments with sustainable returns</li>
+        </ul>
+        <p class="text-gray-700 mt-4">
+          All properties are rigorously vetted for financial viability and growth potential.
+        </p>
+      `,
+      faqModal: `
+        <h2 class="text-2xl font-bold text-indigo-600 mb-4">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          <div>
+            <h3 class="font-semibold text-gray-800">Is investing safe?</h3>
+            <p class="text-gray-700">All properties are legally registered and secured. However, as with any investment, there is risk.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-800">What returns can I expect?</h3>
+            <p class="text-gray-700">Projected yields vary but average between 5-9% annually, depending on the property.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-800">How do I sell my tokens?</h3>
+            <p class="text-gray-700">Tokens can be sold through our platform or to other investors, subject to market demand and liquidity.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-800">Can foreigners invest?</h3>
+            <p class="text-gray-700">Yes, non-residents can invest, subject to South African property laws and regulations.</p>
+          </div>
+        </div>
+      `,
+    };
+
+    document.getElementById('modalInner').innerHTML = content[id] || '<p>Content not found.</p>';
+    document.getElementById('modalOverlay').classList.remove('hidden');
+  }
+
+  function closeModal() {
+    document.getElementById('modalOverlay').classList.add('hidden');
+  }
+</script>
+
+</body>
+</html>
