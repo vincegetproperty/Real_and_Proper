@@ -11,42 +11,44 @@
       scroll-behavior: smooth;
     }
     body, html {
-      font-family: 'Inter', sans-serif;
-    }
+    font-family: 'Inter', sans-serif;
+  }
   </style>
 </head>
 <body class="bg-white text-gray-800">
 
-<header class="fixed top-0 left-0 w-full bg-[#d50f15]/90 backdrop-blur z-50 shadow text-white">
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full bg-white/70 backdrop-blur z-50 shadow">
   <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
-    <div class="flex items-center gap-2">
-      <img src="logo.png" alt="Logo" class="h-8 w-auto">
-      <span class="text-xl font-bold text-white">TokenEstate | Real & Proper T</span>
-    </div>
+    <div class="text-xl font-bold text-indigo-600">TokenEstate | Real & Proper T</div>
 
-    <nav class="hidden md:flex space-x-2 bg-white/20 rounded-full px-2 py-1 shadow-inner">
-      <a href="#about" class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-[#fdd8d8] hover:text-[#d50f15] transition">
+    <nav class="hidden md:flex space-x-2 bg-gray-100 rounded-full px-2 py-1 shadow-inner">
+      <!-- About -->
+      <a href="#about" class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 transition">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16h6M4 6h16M4 18h16" />
         </svg>
         About
       </a>
 
-      <a href="#how" class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-[#fdd8d8] hover:text-[#d50f15] transition">
+      <!-- How It Works -->
+      <a href="#how" class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 transition">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
         </svg>
         How It Works
       </a>
 
-      <a href="#properties" class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-[#fdd8d8] hover:text-[#d50f15] transition">
+      <!-- Properties -->
+      <a href="#properties" class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 transition">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10l9-7 9 7v7a2 2 0 01-2 2h-2m-4 0v-5a2 2 0 00-2-2h-2a2 2 0 00-2 2v5H5a2 2 0 01-2-2v-7z" />
         </svg>
         Properties
       </a>
 
-      <a href="#faq" class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-white hover:bg-[#fdd8d8] hover:text-[#d50f15] transition">
+      <!-- FAQ -->
+      <a href="#faq" class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 transition">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M21 12.02c0 4.97-4.03 9-9 9s-9-4.03-9-9c0-4.97 4.03-9 9-9s9 4.03 9 9z" />
         </svg>
@@ -54,14 +56,14 @@
       </a>
     </nav>
 
-    <a href="#cta" class="hidden md:inline-block bg-white text-[#d50f15] px-4 py-2 rounded hover:bg-gray-100 transition">Get Started</a>
+    <a href="#cta" class="hidden md:inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">Get Started</a>
   </div>
 </header>
 
   <main class="pt-20">
 
     <!-- HERO with local background image -->
-    <section class="min-h-screen flex items-center justify-center bg-cover bg-center text-white" style="background-image: url('home.png');">
+    <section class="min-h-screen flex items-center justify-center bg-cover bg-center text-white" style="background-image: url('home.jpg');">
       <div class="bg-black/50 w-full h-full absolute top-0 left-0"></div>
       <div class="relative text-center px-6 max-w-xl">
         <h1 class="text-5xl font-bold mb-4">Invest in Tokenized Real Estate</h1>
@@ -137,8 +139,7 @@
             <div class="p-4">
               <h3 class="text-lg font-semibold text-gray-800 mb-2">Luxury Condo NYC</h3>
               <p class="text-gray-600 mb-2">R500,000 | Token price: R50</p>
-              <p class="text-gray-600 mb-2"><span class="token-price" data-price="120.50"></span></p>
-            <a href="prop.html" class="text-indigo-600 hover:underline view-details" data-title="Beachfront Villa">View Details</a>
+             <a href="#" class="text-indigo-600 hover:underline view-details">View Details</a>
 
             </div>
           </div>
@@ -148,7 +149,6 @@
             <div class="p-4">
               <h3 class="text-lg font-semibold text-gray-800 mb-2">Modern Villa Miami</h3>
               <p class="text-gray-600 mb-2">R1,200,000 | Token price: R100</p>
-              <p class="text-gray-600 mb-2"><span class="token-price" data-price="120.50"></span></p>
               <a href="#" class="text-indigo-600 hover:underline view-details">View Details</a>
 
             </div>
@@ -159,7 +159,6 @@
             <div class="p-4">
               <h3 class="text-lg font-semibold text-gray-800 mb-2">Penthouse Dubai</h3>
               <p class="text-gray-600 mb-2">R2,800,000 | Token price: R250</p>
-              <p class="text-gray-600 mb-2"><span class="token-price" data-price="67576.50"></span></p>
               <a href="#" class="text-indigo-600 hover:underline view-details">View Details</a>
 
             </div>
@@ -170,7 +169,6 @@
             <div class="p-4">
               <h3 class="text-lg font-semibold text-gray-800 mb-2">Luxury Condo NYC</h3>
               <p class="text-gray-600 mb-2">R500,000 | Token price: R50</p>
-              <p class="text-gray-600 mb-2"><span class="token-price" data-price="10102020.50"></span></p>
              <a href="#" class="text-indigo-600 hover:underline view-details">View Details</a>
 
             </div>
@@ -181,8 +179,7 @@
             <div class="p-4">
               <h3 class="text-lg font-semibold text-gray-800 mb-2">Modern Villa Miami</h3>
               <p class="text-gray-600 mb-2">R1,200,000 | Token price: R100</p>
-              <p class="text-gray-600 mb-2"><span class="token-price" data-price="29472941.50"></span></p>
-              <a href="prop.html" class="text-indigo-600 hover:underline view-details">View Details</a>
+              <a href="#" class="text-indigo-600 hover:underline view-details">View Details</a>
 
             </div>
           </div>
@@ -192,7 +189,6 @@
             <div class="p-4">
               <h3 class="text-lg font-semibold text-gray-800 mb-2">Penthouse Dubai</h3>
               <p class="text-gray-600 mb-2">R2,800,000 | Token price: R250</p>
-              <p class="text-gray-600 mb-2"><span class="token-price" data-price="120.50"></span></p>
              <a href="#" class="text-indigo-600 hover:underline view-details">View Details</a>
 
             </div>
@@ -202,7 +198,6 @@
             <div class="p-4">
               <h3 class="text-lg font-semibold text-gray-800 mb-2">Luxury Condo NYC</h3>
               <p class="text-gray-600 mb-2">R500,000 | Token price: R50</p>
-              <p class="text-gray-600 mb-2"><span class="token-price" data-price="120.50"></span></p>
               <a href="#" class="text-indigo-600 hover:underline view-details">View Details</a>
 
             </div>
@@ -213,7 +208,6 @@
             <div class="p-4">
               <h3 class="text-lg font-semibold text-gray-800 mb-2">Modern Villa Miami</h3>
               <p class="text-gray-600 mb-2">R1,200,000 | Token price: R100</p>
-              <p class="text-gray-600 mb-2"><span class="token-price" data-price="120.50"></span></p>
               <a href="#" class="text-indigo-600 hover:underline view-details">View Details</a>
 
             </div>
@@ -224,7 +218,6 @@
             <div class="p-4">
               <h3 class="text-lg font-semibold text-gray-800 mb-2">Penthouse Dubai</h3>
               <p class="text-gray-600 mb-2">R2,800,000 | Token price: R250</p>
-              <p class="text-gray-600 mb-2"><span class="token-price" data-price="120.50"></span></p>
              <a href="#" class="text-indigo-600 hover:underline view-details">View Details</a>
 
             </div>
@@ -234,7 +227,6 @@
             <div class="p-4">
               <h3 class="text-lg font-semibold text-gray-800 mb-2">Luxury Condo NYC</h3>
               <p class="text-gray-600 mb-2">R500,000 | Token price: R50</p>
-              <p class="text-gray-600 mb-2"><span class="token-price" data-price="120.50"></span></p>
              <a href="#" class="text-indigo-600 hover:underline view-details">View Details</a>
 
             </div>
@@ -245,7 +237,6 @@
             <div class="p-4">
               <h3 class="text-lg font-semibold text-gray-800 mb-2">Modern Villa Miami</h3>
               <p class="text-gray-600 mb-2">R1,200,000 | Token price: R100</p>
-              <p class="text-gray-600 mb-2"><span class="token-price" data-price="120.50"></span></p>
               <a href="#" class="text-indigo-600 hover:underline view-details">View Details</a>
 
             </div>
@@ -256,7 +247,6 @@
             <div class="p-4">
               <h3 class="text-lg font-semibold text-gray-800 mb-2">Penthouse Dubai</h3>
               <p class="text-gray-600 mb-2">R2,800,000 | Token price: R250</p>
-              <p class="text-gray-600 mb-2"><span class="token-price" data-price="120.50"></span></p>
               <a href="#" class="text-indigo-600 hover:underline view-details">View Details</a>
 
             </div>
@@ -294,13 +284,14 @@
     </section>
 
     <!-- CTA -->
-<section id="cta" class="py-16 bg-cover bg-center text-white text-center" style="background-image: url('home2.jpg');">
-  <div class="max-w-3xl mx-auto px-6 bg-black/60 p-8 rounded-xl">
-    <h2 class="text-3xl font-bold mb-4">Start Investing in Real Estate Today</h2>
-    <p class="mb-6">Join TokenEstate and access premium properties worldwide with just a few clicks.</p>
-    <a href="#" class="bg-white text-[#d50f15] px-6 py-3 rounded text-lg font-semibold hover:bg-gray-100 transition create-account">Create Account</a>
-  </div>
-</section>
+    <section id="cta" class="py-16 bg-indigo-600 text-white text-center">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-4">Start Investing in Real Estate Today</h2>
+        <p class="mb-6">Join TokenEstate and access premium properties worldwide with just a few clicks.</p>
+       <a href="#" class="bg-white text-indigo-600 px-6 py-3 rounded text-lg font-semibold hover:bg-gray-100 transition create-account">Create Account</a>
+
+      </div>
+    </section>
 
   </main>
 
@@ -454,38 +445,6 @@
   });
 </script>
 
-<script>
-  // Get all token price elements
-  const tokenPrices = document.querySelectorAll('.token-price');
-
-  tokenPrices.forEach(el => {
-    el.dataset.price = parseFloat(el.dataset.price || '50.00'); // fallback to 50 if not set
-    el.textContent = parseFloat(el.dataset.price).toFixed(2);
-  });
-
-  function updateAllPrices() {
-    tokenPrices.forEach(el => {
-      let currentPrice = parseFloat(el.dataset.price);
-      const change = (Math.random() - 0.5); // +/- 0.5 max
-      currentPrice += change;
-      currentPrice = Math.max(currentPrice, 0.01);
-      el.dataset.price = currentPrice; // update stored value
-      el.textContent = currentPrice.toFixed(2);
-    });
-  }
-
-  setInterval(updateAllPrices, 1000);
-</script>
-
-<script>
-  document.querySelectorAll('.view-details').forEach(link => {
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
-      const title = this.dataset.title || 'Details';
-      openDetailsModal(title);
-    });
-  });
-</script>
 
 </body>
 </html>
