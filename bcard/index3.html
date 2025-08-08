@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent Virtual Business Card</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+    background-color: #111;
+    color: #fff;
+  }
+  .container {
+  width: 100vw;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  display: flex;
+}
+
+.container > div {
+  flex-shrink: 0;
+  width: 100vw;
+  scroll-snap-align: start;
+}
+
+  .page {
+    flex: 0 0 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  /* Contact Page */
+  .contact-form {
+    width: 100%;
+    max-width: 400px;
+  }
+  .contact-form h2 {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .contact-form input, .contact-form select, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1em;
+  }
+  .contact-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #d71016;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  /* Agent Card */
+  .agent-card {
+    text-align: center;
+  }
+  .agent-card img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #d71016;
+  }
+  .agent-card h1 {
+    font-family: 'Orbitron', sans-serif;
+    margin: 15px 0 5px;
+  }
+  /* App-like page */
+  .app-page {
+    background: url('bcard.jpg') no-repeat center center fixed;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 50px;
+  }
+  .app-buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    width: 90%;
+    max-width: 400px;
+  }
+  .app-buttons button {
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 1em;
+    background: rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: 0.2s;
+  }
+  .app-buttons button:hover {
+    background: rgba(215,16,22,0.8);
+  }
+  /* Modals */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-content {
+    background: #222;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 400px;
+    text-align: center;
+    color: #fff;
+  }
+  .close {
+    float: right;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #fff;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Left Page: Contact -->
+  <div class="page" style="background:#1b1b1b;">
+    <div class="contact-form">
+      <h2>Contact Me</h2>
+      <input type="text" placeholder="Full Name *" required>
+      <input type="tel" placeholder="Contact Number *" required>
+      <input type="email" placeholder="Email Address *" required>
+      <select>
+        <option>I'm interested in...</option>
+        <option>Buying Property</option>
+        <option>Selling Property</option>
+        <option>Renting Property</option>
+      </select>
+      <button>Send Message</button>
+    </div>
+  </div>
+
+  <!-- Middle Page: Agent Card -->
+  <div class="page agent-card">
+    <div>
+      <img src="agent.jpg" alt="Agent Photo">
+      <h1>Jane Doe</h1>
+      <p>Real Estate Agent</p>
+    </div>
+  </div>
+
+  <!-- Right Page: App Buttons -->
+  <div class="page app-page">
+    <div class="app-buttons">
+      <button onclick="openModal('emailShare')">Share via Email</button>
+      <button onclick="openModal('whatsappShare')">Share via WhatsApp</button>
+      <button onclick="openModal('whatsappChat')">WhatsApp Chat</button>
+      <button onclick="openModal('emailMe')">Email me</button>
+      <button onclick="openModal('callMe')">Call me</button>
+      <button onclick="openModal('review')">Leave a review</button>
+      <button onclick="openModal('faq')">FAQ's</button>
+      <button onclick="openModal('calculators')">Calculators</button>
+      <button onclick="openModal('blogs')">GetGo Blogs Home Matters</button>
+      <button onclick="openModal('facebook')">Facebook</button>
+      <button onclick="openModal('instagram')">Instagram</button>
+      <button onclick="openModal('linkedin')">LinkedIn</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modals -->
+<div id="emailShare" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('emailShare')">&times;</span><p><a href="mailto:?subject=Check%20this%20out&body=Here%20is%20my%20business%20card" style="color:#d71016;">Share via Email</a></p></div></div>
+<div id="whatsappShare" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('whatsappShare')">&times;</span><p><a href="https://wa.me/?text=Here%20is%20my%20business%20card" target="_blank" style="color:#d71016;">Share via WhatsApp</a></p></div></div>
+<div id="whatsappChat" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('whatsappChat')">&times;</span><p><a href="https://wa.me/27000000000" target="_blank" style="color:#d71016;">Chat on WhatsApp</a></p></div></div>
+<div id="emailMe" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('emailMe')">&times;</span><p><a href="mailto:agent@example.com" style="color:#d71016;">Email Me</a></p></div></div>
+<div id="callMe" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('callMe')">&times;</span><p><a href="tel:+27000000000" style="color:#d71016;">Call Me</a></p></div></div>
+<div id="review" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('review')">&times;</span><p>Leave your review at <a href="#" style="color:#d71016;">this link</a>.</p></div></div>
+<div id="faq" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('faq')">&times;</span><p>FAQ content goes here...</p></div></div>
+<div id="calculators" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('calculators')">&times;</span><p>Calculator tools coming soon...</p></div></div>
+<div id="blogs" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('blogs')">&times;</span><p><a href="#" style="color:#d71016;">Visit GetGo Blogs</a></p></div></div>
+<div id="facebook" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('facebook')">&times;</span><p><a href="#" style="color:#d71016;">Facebook Profile</a></p></div></div>
+<div id="instagram" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('instagram')">&times;</span><p><a href="#" style="color:#d71016;">Instagram Profile</a></p></div></div>
+<div id="linkedin" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('linkedin')">&times;</span><p><a href="#" style="color:#d71016;">LinkedIn Profile</a></p></div></div>
+
+<script>
+window.addEventListener('load', () => {
+  const container = document.querySelector('.container');
+  // Wait a moment so layout is settled
+  setTimeout(() => {
+    container.scrollLeft = window.innerWidth; // scroll exactly one page width
+    console.log('Set scrollLeft to:', window.innerWidth);
+  }, 50);
+});
+
+
+function openModal(id) {
+  document.getElementById(id).style.display = 'flex';
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = 'none';
+}
+</script>
+
+
+</body>
+</html>
