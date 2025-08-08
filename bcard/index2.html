@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Virtual Business Card</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;500&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+  .container { display: flex; width: 300vw; height: 100vh; scroll-snap-type: x mandatory; overflow-x: scroll; }
+  .page { flex: 0 0 100vw; height: 100vh; scroll-snap-align: center; display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 20px; }
+  
+  /* Left page - Contact */
+  .left { background: #111; color: #fff; }
+  .left h2 { font-family: 'Orbitron', sans-serif; margin-bottom: 20px; }
+  .left input, .left textarea, .left select { width: 100%; padding: 10px; margin: 8px 0; border: none; border-radius: 8px; }
+  .left button { padding: 10px; background: crimson; color: white; border: none; border-radius: 8px; width: 100%; font-size: 16px; cursor: pointer; }
+
+  /* Center page - Business Card */
+  .center { background: #222; color: #fff; text-align: center; }
+  .center img { width: 150px; height: 150px; border-radius: 50%; margin-bottom: 15px; }
+  .center h1 { font-family: 'Orbitron', sans-serif; margin-bottom: 5px; }
+  .center p { font-size: 14px; opacity: 0.8; }
+
+  /* Right page - App Actions */
+  .right {
+    background: url('bcard.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+  }
+  .buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 90%; }
+  .buttons button {
+    background: rgba(0,0,0,0.6);
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .buttons button:hover { background: rgba(0,0,0,0.8); }
+
+  /* Modals */
+  .modal {
+    display: none; position: fixed; z-index: 1000; left: 0; top: 0;
+    width: 100%; height: 100%; background: rgba(0,0,0,0.7);
+    align-items: center; justify-content: center;
+  }
+  .modal-content {
+    background: #1c1c1c; color: white; padding: 20px; border-radius: 15px; width: 80%; max-width: 400px;
+    text-align: center; animation: fadeIn 0.3s ease;
+  }
+  .modal-content h3 { font-family: 'Orbitron', sans-serif; margin-bottom: 10px; }
+  .close { cursor: pointer; font-size: 20px; position: absolute; right: 20px; top: 20px; }
+  @keyframes fadeIn { from {opacity:0; transform: scale(0.95);} to {opacity:1; transform: scale(1);} }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Left Page - Contact -->
+  <div class="page left">
+    <h2>Contact Me</h2>
+    <input type="text" placeholder="Full Name *">
+    <input type="tel" placeholder="Contact Number *">
+    <input type="email" placeholder="Email Address *">
+    <select>
+      <option>I'm interested in:</option>
+      <option>Buying</option>
+      <option>Selling</option>
+      <option>Renting</option>
+    </select>
+    <button>Send</button>
+  </div>
+
+  <!-- Center Page - Business Card -->
+  <div class="page center">
+    <img src="bcard.jpg" alt="Agent Image">
+    <h1>Agent Name</h1>
+    <p>Real Estate Specialist</p>
+    <p>Company Name</p>
+  </div>
+
+  <!-- Right Page - App Buttons -->
+  <div class="page right">
+    <div class="buttons">
+      <button onclick="openModal('emailShare')">Share via Email</button>
+      <button onclick="openModal('whatsappShare')">Share via WhatsApp</button>
+      <button onclick="openModal('whatsappChat')">WhatsApp Chat</button>
+      <button onclick="openModal('emailMe')">Email me</button>
+      <button onclick="openModal('callMe')">Call me</button>
+      <button onclick="openModal('review')">Leave a review</button>
+      <button onclick="openModal('faq')">FAQ's</button>
+      <button onclick="openModal('calculators')">Calculators</button>
+      <button onclick="openModal('blogs')">GetGo Blogs Home Matters</button>
+      <button onclick="openModal('facebook')">Facebook</button>
+      <button onclick="openModal('instagram')">Instagram</button>
+      <button onclick="openModal('linkedin')">LinkedIn</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modals -->
+<div id="emailShare" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('emailShare')">&times;</span><h3>Share via Email</h3><p><a href="mailto:?subject=Check this out&body=Look at this link">Click here to share</a></p></div></div>
+<div id="whatsappShare" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('whatsappShare')">&times;</span><h3>Share via WhatsApp</h3><p><a href="https://wa.me/?text=Check%20this%20out" target="_blank">Click here to share</a></p></div></div>
+<div id="whatsappChat" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('whatsappChat')">&times;</span><h3>WhatsApp Chat</h3><p><a href="https://wa.me/27700000000" target="_blank">Start Chat</a></p></div></div>
+<div id="emailMe" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('emailMe')">&times;</span><h3>Email Me</h3><p><a href="mailto:agent@example.com">agent@example.com</a></p></div></div>
+<div id="callMe" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('callMe')">&times;</span><h3>Call Me</h3><p><a href="tel:+27700000000">+27 70 000 0000</a></p></div></div>
+<div id="review" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('review')">&times;</span><h3>Leave a Review</h3><textarea placeholder="Write your review here"></textarea><br><button>Submit</button></div></div>
+<div id="faq" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('faq')">&times;</span><h3>FAQ's</h3><p>Coming soon...</p></div></div>
+<div id="calculators" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('calculators')">&times;</span><h3>Calculators</h3><p>Mortgage and affordability calculators coming soon.</p></div></div>
+<div id="blogs" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('blogs')">&times;</span><h3>GetGo Blogs</h3><p>Visit our blog for property tips.</p></div></div>
+<div id="facebook" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('facebook')">&times;</span><h3>Facebook</h3><p><a href="https://facebook.com" target="_blank">Visit Facebook</a></p></div></div>
+<div id="instagram" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('instagram')">&times;</span><h3>Instagram</h3><p><a href="https://instagram.com" target="_blank">Visit Instagram</a></p></div></div>
+<div id="linkedin" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('linkedin')">&times;</span><h3>LinkedIn</h3><p><a href="https://linkedin.com" target="_blank">Visit LinkedIn</a></p></div></div>
+
+<script>
+function openModal(id) { document.getElementById(id).style.display = 'flex'; }
+function closeModal(id) { document.getElementById(id).style.display = 'none'; }
+</script>
+
+</body>
+</html>
